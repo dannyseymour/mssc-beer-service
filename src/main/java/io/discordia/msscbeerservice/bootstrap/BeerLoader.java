@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 @Component
 public class BeerLoader implements CommandLineRunner {
 
+    public static final Long BEER_1_UPC = 1234L;
     private final BeerRepository beerRepository;
 
     public BeerLoader(BeerRepository beerRepository) {
