@@ -4,6 +4,7 @@ import io.discordia.msscbeerservice.web.model.BeerDto;
 
 import java.util.UUID;
 
+
 public interface BeerService {
 
 

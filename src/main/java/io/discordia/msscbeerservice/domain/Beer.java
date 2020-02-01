@@ -1,5 +1,6 @@
 package io.discordia.msscbeerservice.domain;
 
+import io.discordia.msscbeerservice.web.model.BeerStyle;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
@@ -11,7 +12,7 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
-@Value
+@Data
 @Builder(toBuilder = true)
 public class Beer {
 
@@ -34,7 +35,7 @@ public class Beer {
 
 
     private String beerName;
-    private String beerStyle;
+    private BeerStyle beerStyle;
 
     @Column(unique = true)
     private Long upc;
@@ -44,7 +45,6 @@ public class Beer {
 
     private Integer minOnHand;
     private Integer quantityToBrew;
-
 
 
 
