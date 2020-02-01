@@ -1,5 +1,7 @@
 package io.discordia.msscbeerservice.web.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,10 +26,16 @@ public class BeerDto {
 
     @Null
     private Integer version;
+
+
     @Null
+    @JsonFormat(pattern="yyy-MM-dd'T'HH:mm:ss2", shape= Shape.STRING)
     private OffsetDateTime createdDate;
+    
     @Null
+    @JsonFormat(pattern="yyy-MM-dd'T'HH:mm:ss2", shape= Shape.STRING)
     private OffsetDateTime lastModifiedDate;
+
     @NotBlank
     private String beerName;
     @NotNull
@@ -35,6 +43,8 @@ public class BeerDto {
     @Positive
     @NotNull
     private Long upc;
+
+    @JsonFormat(shape= Shape.STRING)
     @NotNull
     @Positive
     private BigDecimal price;
