@@ -57,6 +57,7 @@ class BeerControllerTest {
                 .description("UUID of desired beer to get")
         )));
     }
+/*
 
     @Test
     void saveNewBeer() throws Exception {
@@ -79,6 +80,7 @@ class BeerControllerTest {
                 .content(beerDtoJson))
                 .andExpect(status().isNoContent());
     }
+*/
 
     BeerDto getValidBeerDto(){
         return BeerDto.builder()
